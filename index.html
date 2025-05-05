@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BanderoGoose</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preload" href="./img/goose-anim.gif" as="image">
+</head>
+<body>
+    <section class="main-page">
+        <div class="wrapper">
+            <div class="logo">
+                <img src="./img/logo.svg" alt="BanderoGoose Logo" class="logo-img">
+            </div>
+            <div class="main-page-text-container">
+                <p class="main-page-hello-text">Доброго вечора, ми з України</p>
+                <h1 class="main-page-title-text">Бандерогусь</h1>
+                <p class="main-page-subtitle-text">Спеціальний бойовий гусак із біолабораторій України. Пишаюся своїми подвигами, бороню Батьківщину та підтримую позитивний дух народу. Слава Україні!</p>
+                <button class="main-page-btn" id="go-to-form-btn">Запустити гуся</button>
+            </div>
+            <img src="./img/goose.svg" alt="BanderoGoose">
+        </div>
+
+    </section>
+    <section class="facts">
+        <img src="./img/tryzub.svg" alt="Тризуб" class="facts-rtyzub">
+        <h2 class="facts-text-title">Цікаві факти про бандерогусей</h2>
+        <p class="facts-text-description">Зазвичай бандерогуси — виключно мирні птахи. Але у разі небезпеки можуть атакувати ворога системою н адпотужного озброєння. Також нищать психологічно, активуючи високочастотне шипіння та розмахування крилами</p>
+        <div class="wrapper">
+            <figure class="facts-item">
+                <img src="./img/goose1.svg" alt="BanderoGoose" class="facts-img">
+                <h3 class="facts-item-title">Система навігації</h3>
+                <p class="facts-item-description">Супутниковий GPS та ехолокатори розпізнають ворожу техніку навіть на етапі збірки</pfacts-item-в>
+            </figure>
+            <figure class="facts-item">
+                <img src="./img/goose2.svg" alt="BanderoGoose" class="facts-img">
+                <h3 class="facts-item-title">Очі-тепловізори</h3>
+                <p class="facts-item-description">Допомагають виявити характер сигнатури об’єктів та значно підвищують точність удару</p> 
+            </figure>
+            <figure class="facts-item">
+                <img src="./img/goose3.svg" alt="BanderoGoose" class="facts-img">
+                <h3 class="facts-item-title">Байракрила</h3>
+                <p class="facts-item-description">Можуть нести 2-4 керовані ракети, що вражають ціль на відстані «ніхріна собі» кілометрів</p> 
+            </figure>  
+        </div>
+    </section>
+    <section class="form-container">
+            <form action="" class="form" id="form">
+                <img src="./img/tryzub.svg" alt="Тризуб" class="form-rtyzub">
+                <h4 class="form-title">Поділися, будь ласка, поштою</h4>
+                <p class="form-description">та запиши гуся до бандерозагону</p>
+                <div class="form-field">
+                    <label for="user-name" class="form-field-label form-field-name">Ім'я</label>
+                    <input type="text" id="user-name" class="form-input">
+                </div>
+                <div class="form-field">
+                    <label for="user-email" class="form-field-label form-field-email">Email</label>
+                    <input type="email" id="user-email" class="form-input">
+                </div>
+                <div>
+                    <button class="main-page-btn" id="launch-btn" type="submit">Запустити гуся</button>
+                </div>
+            </form>
+    </section>
+    <section class="footer">
+        <div class="wrapper">
+            <p class="footer-text" class="form">© 2025 BanderoGoose. Всі права захищені.</p>
+            <!-- <div class="socials">
+                <a href="#" class="socials-link"><img src="./img/telegram.svg" alt="Telegram"></a>
+                <a href="#" class="socials-link"><img src="./img/twitter.svg" alt="Twitter"></a>
+                <a href="#" class="socials-link"><img src="./img/facebook.svg" alt="Facebook"></a>
+            </div> -->
+        </div>
+    </section>
+    <script src="./js/form.js"></script>
+</body>
+</html>
