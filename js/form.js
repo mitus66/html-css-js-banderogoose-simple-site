@@ -4,19 +4,14 @@ const goToFormButton = document.querySelector('#go-to-form-btn');
 const userEmailField = document.querySelector('#user-email');
 const userNameField = document.querySelector('#user-name');
 
-
-
 goToFormButton.addEventListener('click', function (e) {
     e.preventDefault();
     form.scrollIntoView();
 });
 
 function clearFormFields() {
-    const fieldName = form.querySelector('input[type="text"]');
-    const fieldEmail = form.querySelector('input[type="email"]');
-
-    fieldName.value = '';
-    fieldEmail.value = '';
+    userNameField.value = '';
+    userEmailField.value = '';
 }
 
 function addGooseElement() {
@@ -27,36 +22,38 @@ function addGooseElement() {
     targetContainer.appendChild(gooseEl);
 }
 
-function showGooseAnim() {
+function showGooseAnim(callback) {
     const gooseEl = document.querySelector('.goose-anim');
 
     gooseEl.setAttribute('src', './img/goose-anim.gif');
-    
 
     setTimeout(() => {
         gooseEl.removeAttribute('src');
-    }, 4000)
+        if (typeof callback === 'function') {
+            callback();
+        }
+    }, 4000);
 }
 
 addGooseElement();
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-    const formData = new FormData(form);
 
-    if (userEmailField?.value?.length > 30) {
+    if (userEmailField?.value?.length > 320) {
+        alert('Email надто довгий');
         return;
     }
 
-    console.log('Імʼя користувача: ', userEmailField.value);
-    console.log('Email користувача: ', userNameField.value);
+    console.log('Імʼя користувача: ', userNameField.value);
+    console.log('Email користувача: ', userEmailField.value);
 
     launchBtn.setAttribute('disabled', true);
     launchBtn.style.opacity = '0.7';
 
-    showGooseAnim();
-
-    setTimeout(() => {
+    showGooseAnim(() => {
+        clearFormFields(); // очищення
+        launchBtn.removeAttribute('disabled'); // активуємо кнопку знову
         launchBtn.style.opacity = '1';
-    }, 4000)
-})
+    });
+});
